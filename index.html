@@ -23,7 +23,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     
     <!-- FontAwesome and Remix Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -51,19 +51,14 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      (function () {
-        const pass = prompt("Passwort eingeben:");
-        if (pass === "GLOW2025") {
-          const s = document.createElement("script");
-          s.type = "module";
-          s.src = "/src/main.tsx";
-          document.body.appendChild(s);
-        } else {
-          document.body.innerHTML = "";
-          alert("Falsches Passwort");
-        }
-      })();
+    <script type="module">
+      const pass = prompt("Passwort eingeben:");
+      if (pass === "GLOW2025") {
+        import('/src/main.tsx');
+      } else {
+        document.body.innerHTML = '';
+        alert('Falsches Passwort');
+      }
     </script>
   </body>
 </html>
