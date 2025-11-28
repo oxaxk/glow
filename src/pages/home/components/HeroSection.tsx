@@ -191,7 +191,7 @@ export default function HeroSection() {
               <Button
                 href="#workshops"
                 size="lg"
-                className="text-sm md:text-base px-8 py-3.5 rounded-full bg-[#D7B8A3] text-white hover:bg-[#C5A390]"
+                className="text-sm md:text-base px-8 py-3.5 rounded-full bg-[#D7B8A3] text-[#15110F] hover:bg-[#C5A390]"
               >
                 <i className="ri-brush-line mr-3 text-xl md:text-2xl"></i>
                 Nail Workshops ansehen
