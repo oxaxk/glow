@@ -14,7 +14,7 @@ export default function ServicesSection() {
       icon: 'ri-hand-heart-line',
       title: 'Russische Maniküre & Naturnägel',
       description:
-        'Saubere Cuticle-Arbeit, präzise Vorbereitung und stabiler Aufbau – für Naturnägel, die gepflegt aussehen und lange halten. Ideal als Basis für dezente Designs.',
+        'Saubere Cuticle-Arbeit, präzise Vorbereitung und stabiler Aufbau – für Naturnägel, die gepflegt aussehen und lange halten.',
       image: '/images/services/russian-manicure.jpg'
     },
     {
@@ -33,7 +33,7 @@ export default function ServicesSection() {
     },
     {
       icon: 'ri-star-smile-line',
-      title: 'Tooth Gems · Swarovski & Echtgold',
+      title: 'Tooth Gems',
       description:
         'Swarovski Tooth Gems, Lines und Echtgold-Steine – präzise gesetzt mit Fokus auf Haltbarkeit und schonender Behandlung des Zahnschmelzes.',
       image: '/images/services/tooth-gems.jpg'
@@ -49,7 +49,7 @@ export default function ServicesSection() {
       icon: 'ri-team-line',
       title: 'Nail Workshops',
       description:
-        '1-tägige Russian Manicure & Nail Art Workshops – mit Deep Manicure, Bits-Technik, Naturnagelvorbereitung, French, Babyboomer, Blooming, 3D-Flowers, Chrome & Cat-Eye. Inkl. Zertifikat und Goodie-Bag.',
+        'Russian Manicure & Nail Art Workshops – mit Deep Manicure, Bits-Technik, Naturnagelvorbereitung, French, Babyboomer, Blooming, 3D-Flowers, Chrome & Cat-Eye. Inkl. Zertifikat und Goodie-Bag.',
       image: '/images/services/workshop-russian.jpg'
     }
   ];
