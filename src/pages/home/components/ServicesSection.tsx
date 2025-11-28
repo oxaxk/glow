@@ -222,7 +222,7 @@ export default function ServicesSection() {
             >
               {services.map((svc) => (
                 <div key={svc.title} className="shrink-0 w-[85%] md:w-[45%] lg:w-[38%] snap-center">
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-[480px] md:h-[460px] lg:h-[480px] flex flex-col">
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-[520px] md:h-[500px] lg:h-[520px] flex flex-col">
                     <div className="relative h-[55%] overflow-hidden">
                       <img
                         src={svc.image}
