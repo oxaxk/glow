@@ -54,27 +54,43 @@ export default function ServicesSection() {
     }
   ];
 
+  const scrollToIndex = (index: number) => {
+    const el = mobileScrollRef.current;
+    if (!el) return;
+
+    const child = el.children[index] as HTMLElement | undefined;
+    if (child) {
+      const offset = child.offsetLeft - (el.clientWidth - child.clientWidth) / 2;
+      el.scrollTo({ left: offset, behavior: 'smooth' });
+    }
+  };
+
   const nextSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
+    setCurrentIndex((prevIndex) => {
+      const newIndex = (prevIndex + 1) % services.length;
+      scrollToIndex(newIndex);
+      return newIndex;
+    });
     setTimeout(() => setIsTransitioning(false), 300);
   };
 
   const prevSlide = () => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + services.length) % services.length);
+    setCurrentIndex((prevIndex) => {
+      const newIndex = (prevIndex - 1 + services.length) % services.length;
+      scrollToIndex(newIndex);
+      return newIndex;
+    });
     setTimeout(() => setIsTransitioning(false), 300);
   };
 
   const goToSlide = (index: number) => {
     if (index === currentIndex) return;
     setCurrentIndex(index);
-    const el = mobileScrollRef.current;
-    if (el) {
-      el.scrollTo({ left: index * el.clientWidth, behavior: 'smooth' });
-    }
+    scrollToIndex(index);
   };
 
   // Touch/Mouse handlers for swipe functionality
@@ -221,7 +237,7 @@ export default function ServicesSection() {
               style={{ WebkitOverflowScrolling: 'touch' }}
             >
               {services.map((svc) => (
-                <div key={svc.title} className="shrink-0 w-[85%] md:w-[45%] lg:w-[38%] snap-center">
+                <div key={svc.title} className="shrink-0 w-[85%] md:w-[45%] lg:w-[320px] xl:w-[360px] snap-center">
                   <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 h-[520px] md:h-[500px] lg:h-[520px] flex flex-col">
                     <div className="relative h-[55%] overflow-hidden">
                       <img
