@@ -49,7 +49,7 @@ export default function ServicesSection() {
       icon: 'ri-team-line',
       title: 'Nail Workshops',
       description:
-        'Russian Manicure & Nail Art Workshops – mit Deep Manicure, Bits-Technik, Naturnagelvorbereitung, French, Babyboomer, Blooming, 3D-Flowers, Chrome & Cat-Eye. Inkl. Zertifikat und Goodie-Bag.',
+        'Deep Manicure, Bits-Technik, Naturnagelvorbereitung, French, Babyboomer, Blooming, 3D-Flowers, Chrome & Cat-Eye. Inkl. Zertifikat und Goodie-Bag.',
       image: '/images/services/workshop-russian.jpg'
     }
   ];
